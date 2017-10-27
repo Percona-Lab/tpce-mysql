@@ -1,0 +1,36 @@
+#!/bin/sh
+USERID=tpce/tpce
+sqlldr $USERID control=AccountPermission.ctl
+sqlldr $USERID control=Customer.ctl
+sqlldr $USERID control=CustomerAccount.ctl
+sqlldr $USERID control=CustomerTaxrate.ctl
+sqlldr $USERID control=Holding.ctl
+sqlldr $USERID control=HoldingHistory.ctl
+sqlldr $USERID control=HoldingSummary.ctl
+sqlldr $USERID control=WatchItem.ctl
+sqlldr $USERID control=WatchList.ctl
+sqlldr $USERID control=Broker.ctl
+sqlldr $USERID control=CashTransaction.ctl
+sqlldr $USERID control=Charge.ctl
+sqlldr $USERID control=CommissionRate.ctl
+sqlldr $USERID control=Settlement.ctl
+sqlldr $USERID control=Trade.ctl
+sqlldr $USERID control=TradeHistory.ctl
+#sqlldr $USERID control=TradeRequest.ctl
+sqlldr $USERID control=TradeType.ctl
+sqlldr $USERID control=Company.ctl
+sqlldr $USERID control=CompanyCompetitor.ctl
+sqlldr $USERID control=DailyMarket.ctl
+sqlldr $USERID control=Exchange.ctl
+sqlldr $USERID control=Financial.ctl
+sqlldr $USERID control=Industry.ctl
+sqlldr $USERID control=LastTrade.ctl
+sqlldr $USERID control=NewsItem.ctl
+sqlldr $USERID control=NewsXRef.ctl
+sqlldr $USERID control=Sector.ctl
+sqlldr $USERID control=Security.ctl
+sqlldr $USERID control=Address.ctl
+sqlldr $USERID control=StatusType.ctl
+sqlldr $USERID control=Taxrate.ctl
+sqlldr $USERID control=ZipCode.ctl
+

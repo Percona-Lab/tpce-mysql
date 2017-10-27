@@ -1,0 +1,4 @@
+DROP TABLE IF EXISTS seq_trade_id;
+CREATE TABLE seq_trade_id ( id BIGINT(16) NOT NULL ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+INSERT INTO seq_trade_id SELECT MAX(t_id) FROM trade;
+

@@ -1,0 +1,13 @@
+This package based on tpc-e workload described 
+on http://www.tpc.org/tpce/default.asp
+and uses EGen software provided by TPC.
+
+The package is fully compatible with
+TPC license
+http://www.tpc.org/tpce/egen/TPC-E%20License%20Agreement.pdf
+
+The results you get with this package
+can't be named "TPC Benchmark Results"
+and are not compatible or comparable with
+TPC-E Benchmark results 
+

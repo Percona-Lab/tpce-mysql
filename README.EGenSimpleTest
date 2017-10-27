@@ -1,0 +1,51 @@
+simple TPC-E workload generator for developmental use of rdbms
+(based on http://www.tpc.org/tpce/spec/TPCE-v1.9.0.pdf )
+
+#########################################################################
+Attention: ODBC versions are not tested at all. And aren't supported now.
+#########################################################################
+
+<requirements>
+- EGen_v1.9.0.zip
+    ( from http://www.tpc.org/tpce/ )
+
+- unixODBC and the ODBC driver for your rdbms
+    * Even if you use MySQL C API only, unixODBC headers are needed.
+
+
+<brief example>
+
+1.
+  Extract files to EGen_v1.9.0/ (here!) from EGen_v1.9.0.zip
+
+2.
+  > cd EGen_v1.9.0/prj/
+  > cp Makefile.new Makefile
+
+3.
+  Configure Makefile as you like
+  (default is for MySQL C API)
+
+4.
+  > make
+  > cd ..
+
+5.
+  Generate data
+
+  (ex. customers=1000, history=3days *These are too small for the TPC-E specification)
+  > ./bin/EGenLoader -c 1000 -t 1000 -w 3
+
+  *generated in ./flat_out (about 200MB)
+
+6.
+  Setup database using scripts in ./scripts/[rdbms name]/
+
+7.
+  Testing
+
+  (ex. MySQL C API ver. : rampup 10s, measure 300s, "CE" sessions 12)
+  > ./bin/EGenSimpleTest -S server_name -D db_name -c 1000 -a 1000 -d 3 -r 10 -t 300 -u 12
+
+
+
