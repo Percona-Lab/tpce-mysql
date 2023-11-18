@@ -4,9 +4,7 @@
 #ifndef _ODBC_WRAPPER_H
 #define _ODBC_WRAPPER_H
 
-#include <my_global.h>
 #include <mysql.h>
-#include <my_sys.h>
 
 // This odbc_wrapper needs unixODBC headers.
 #include <sql.h>
@@ -16,6 +14,10 @@
 // Trick to avoid g++ error
 #undef max
 #undef min
+
+#define TRUE true
+#define FALSE false
+#define my_bool bool
 
 namespace TPCE
 {
